@@ -19,8 +19,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 
 });
+// Routes
 
-Route::post('brief',[testController::class,'store']);
+Route::post('brief',[testController::class,'store']); 
 Route::get('brief',[testController::class,'select']);
 Route::delete('brief/{id}',[testController::class,'destroy']);
 Route::get('/brief/{id}', [testController::class,'edit']);
