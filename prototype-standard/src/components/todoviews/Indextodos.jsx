@@ -33,7 +33,7 @@ function Indextodos() {
                 {todos.map(Todo=>(
                     <tr key={Todo.id}>
                         <td>{Todo.id} </td>
-                        <td>{Todo.nameBrief}</td>
+                        <td>{Todo.firstname}</td>
                         <td>Edit / Delete</td>
                     </tr>
                 ))}
