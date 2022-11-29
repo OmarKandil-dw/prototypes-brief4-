@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const Addtodos = () => {
   const [formvalue,setformvalue] = useState({ 
-    firstname:""
+    todo:""
 
    })
    const captureValue = (evt) =>{
@@ -18,16 +18,17 @@ const Addtodos = () => {
     e.preventDefault();
     await axios.post('http://127.0.0.1:8000/api/brief/',formvalue)
     setformvalue ({
-      firstname :""
+      todo :""
     })
     console.log('ok')
    }
+   
   return (
     <div>Addtodos
 
       <form>
-        <input type="text" name='firstname' value={formvalue.firstname} onChange={captureValue} />
-        <input type="button" onClick={AddTodos}  />
+        <input type="text" name='todo' value={formvalue.todo} onChange={captureValue} />
+        <input type="submit" onClick={AddTodos}  />
       </form>
     </div>
   )
